@@ -145,12 +145,9 @@ public class LZ77 {
             else
             {
                 next += text.toCharArray()[i];
-              //  System.out.println(next);
                 i++ ;
             }
 
-
-            //System.out.println("<" + ptr + "," + length + "," + next + ">");
             if (ptr == 0)
             {
                 decompressed += next ;
@@ -161,7 +158,6 @@ public class LZ77 {
                 for (int j=0 ; j<length ; j++)
                 {
                     decompressed+=decompressed.toCharArray()[count - ptr+j];
-                    //count ++ ;
                 }
                 count += length ;
 
